@@ -2,12 +2,17 @@
 
 namespace school {
 
-int Student::years_enrolled(int actual_year) {
-    return actual_year - year;
+int Student::years_enrolled(int actual_year) const{
+    return actual_year - entrance_year;
 }
 
-double Student::average() {
-    return (note1 + note2 + note3) / 3;
+double Student::average() const{
+    auto total = 0.0;
+
+    for (auto n : notes) {
+        total += n;
+    }
+    return total / notes.size();
 }
 
 }

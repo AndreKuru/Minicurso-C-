@@ -3,37 +3,36 @@
 
 
 #include <iostream>
-#include <string>
+#include <vector>
 
 namespace school {
 
 class Student {
 public:
-    Student(std::string name, int year):
+    Student(std::string const& name, int entrance_year):
         name_{name},
-        year{year}
+        entrance_year{entrance_year}
+        // notes{new std::vector<double> {}}
     {}
 
 
-    Student(std::string name, int year, double note1, double note2, double note3):
+    Student(std::string const& name, int entrance_year, std::vector<double> const& notes):
         name_{name},
-        year{year},
-        note1{note1},
-        note2{note2},
-        note3{note3}
+        entrance_year{entrance_year},
+        notes{notes}
     {}
 
-    std::string name() const {
+    std::string const& name() const {
         return name_;
     }
 
-    int years_enrolled(int actual_year);
-    double average();
+    int years_enrolled(int actual_year) const;
+    double average() const;
 
 private:
     std::string name_;
-    int year;
-    double note1{0}, note2{0}, note3{0};
+    int entrance_year;
+    std::vector<double> notes;
 };
 
 }

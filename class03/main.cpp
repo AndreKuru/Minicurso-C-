@@ -11,10 +11,11 @@ int main()
     using school::Student;
 
     // TODO: initialize a vector called `students` here
-    auto students = std::vector<Student> {};
-    students.push_back(Student("Carol", 2016, 9, 9.5, 9.6));
-    students.push_back(Student("Caldas", 2015, 7, 8, 9.3));
-    students.push_back(Student("Santos", 2010, 6, 5, 6.3));
+    auto students = std::vector<Student> {
+        Student("Carol", 2016, {9, 9.5, 9.6}),
+        Student("Caldas", 2015, {7, 8, 9.3}),
+        Student("Santos", 2010, {6, 5, 6.3})
+    };
 
     for (auto s: school::approved(students)) {
         std::cout << s.name()
