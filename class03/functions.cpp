@@ -1,8 +1,9 @@
 #include <vector>
 #include "functions.h"
 
-namespace school {
-std::vector<Student> approved(std::vector<Student> const& students) {
+using school::Student;
+
+std::vector<Student> school::approved(std::vector<Student> const& students) {
     auto approveds = std::vector<Student> {};
 
     for (auto& student : students) {
@@ -14,7 +15,7 @@ std::vector<Student> approved(std::vector<Student> const& students) {
     return approveds;
 }
 
-std::vector<Student> dismissed_by_time(std::vector<Student> const& students, int actual_year) {
+std::vector<Student> school::dismissed_by_time(std::vector<Student> const& students, int actual_year) {
     auto dismisseds = std::vector<Student> {};
     
     for (auto& student : students) {
@@ -26,5 +27,3 @@ std::vector<Student> dismissed_by_time(std::vector<Student> const& students, int
     return dismisseds;
 }
 
-
-}

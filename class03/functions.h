@@ -2,7 +2,6 @@
 #define SCHOOL_FUNCTIONS_H
 
 
-#include <iostream>
 #include <vector>
 #include "student.h"
 

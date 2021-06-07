@@ -2,7 +2,7 @@
 #define SCHOOL_STUDENT_H
 
 
-#include <iostream>
+#include <string>
 #include <vector>
 
 namespace school {
@@ -11,8 +11,8 @@ class Student {
 public:
     Student(std::string const& name, int entrance_year):
         name_{name},
-        entrance_year{entrance_year}
-        // notes{new std::vector<double> {}}
+        entrance_year{entrance_year},
+        notes{std::vector<double> {}}
     {}
 
 
