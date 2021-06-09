@@ -19,7 +19,7 @@ std::vector<Student> school::dismissed_by_time(std::vector<Student> const& stude
     auto dismisseds = std::vector<Student> {};
     
     for (auto& student : students) {
-        if (student.years_enrolled(actual_year) > 7) {
+        if (student.years_enrolled(actual_year) >= 7) {
             dismisseds.push_back(student);
         }
     }
