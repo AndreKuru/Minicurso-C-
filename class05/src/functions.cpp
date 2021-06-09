@@ -3,6 +3,7 @@
 #include <vector>
 #include "functions.h"
 #include <sstream>
+#include <fstream>
 
 using namespace std::string_literals;
 using school::Student;
@@ -47,7 +48,11 @@ double ask_double(std::istream& in, std::string question)
 {
     std::cout << question;
     auto answer = get_double(in);
-    std::cout << "\n";
+
+    // Only if is a fstream
+    if (dynamic_cast<std::ifstream*>(&in) != nullptr) {
+        std::cout << answer << "\n";
+    }
 
     return answer;
 }
@@ -56,7 +61,11 @@ int ask_int(std::istream& in, std::string question)
 {
     std::cout << question;
     auto answer = get_int(in);
-    std::cout << "\n";
+
+    // Only if is a fstream
+    if (dynamic_cast<std::ifstream*>(&in) != nullptr) {
+        std::cout << answer << "\n";
+    }
 
     return answer;
 }
@@ -69,7 +78,10 @@ std::string ask_string(std::istream& in, std::string question)
     auto answer = ""s;
     std::getline(in, answer);
 
-    std::cout << "\n";
+    // Only if is a fstream
+    if (dynamic_cast<std::ifstream*>(&in) != nullptr) {
+        std::cout << answer << "\n";
+    }
 
     return answer;
 }

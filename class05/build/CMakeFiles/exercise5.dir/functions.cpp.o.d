@@ -134,4 +134,8 @@ CMakeFiles/exercise5.dir/functions.cpp.o: \
  /usr/include/c++/11.1.0/bits/vector.tcc \
  /home/kuru/UFSC/Curso\ C++/class05/src/functions.h \
  /home/kuru/UFSC/Curso\ C++/class05/src/student.h \
- /usr/include/c++/11.1.0/sstream /usr/include/c++/11.1.0/bits/sstream.tcc
+ /usr/include/c++/11.1.0/sstream /usr/include/c++/11.1.0/bits/sstream.tcc \
+ /usr/include/c++/11.1.0/fstream /usr/include/c++/11.1.0/bits/codecvt.h \
+ /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/11.1.0/bits/fstream.tcc
