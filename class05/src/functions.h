@@ -2,8 +2,9 @@
 #define SCHOOL_FUNCTIONS_H
 
 
-#include <vector>
 #include "student.h"
+#include <vector>
+#include <iosfwd>
 
 
 namespace school {
